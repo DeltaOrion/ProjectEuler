@@ -7,7 +7,12 @@ import java.util.*;
 public class ProblemTwentyTwo {
 
     public static void main(String[] args) {
-        String path = "C:\\Users\\User\\Dropbox\\Project Euler\\src\\me\\deltaorion\\euler\\P22\\names.txt";
+        String path = null;
+        if(args.length==0) {
+            path = "src" + File.separator + "me" + File.separator + "deltaorion" + File.separator + "euler" + File.separator + "P22" + File.separator + "names.txt";
+        } else {
+            path = args[0];
+        }
         File file = new File(path);
         try {
             List<String> names = getNames(file);

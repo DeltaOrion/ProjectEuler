@@ -14,8 +14,6 @@ public class Problem101 {
             int x = 1;
             long bop = polynomial.getIntY(x);
             long genY = generator.getIntY(x);
-            if(i==5)
-                System.out.println("Breakpoint");
             while (genY==bop) {
                 x++;
                 bop = polynomial.getIntY(x);

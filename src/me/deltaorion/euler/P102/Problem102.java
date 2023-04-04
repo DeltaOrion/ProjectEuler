@@ -7,7 +7,12 @@ import java.util.Scanner;
 public class Problem102 {
 
     public static void main(String[] args) throws FileNotFoundException {
-        String filename = "C:\\Users\\User\\Dropbox\\Project Euler\\src\\me\\deltaorion\\euler\\P102\\triangles.txt";
+        String filename = null;
+        if(args.length==0) {
+            filename = "src" + File.separator + "me" + File.separator + "deltaorion" + File.separator + "euler" + File.separator + "P102" + File.separator + "triangles.txt";
+        } else {
+            filename = args[0];
+        }
         Scanner scanner = new Scanner(new File(filename));
         int points = 0;
         while (scanner.hasNextLine()) {

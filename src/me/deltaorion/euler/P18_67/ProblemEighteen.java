@@ -6,7 +6,12 @@ import java.io.FileNotFoundException;
 public class ProblemEighteen {
 
     public static void main(String[] args) throws FileNotFoundException {
-        String path = "C:\\Users\\User\\Dropbox\\Project Euler\\src\\me\\deltaorion\\euler\\P18_67\\67.txt";
+        String path = null;
+        if(args.length==0) {
+            path = "src" + File.separator + "me" + File.separator + "deltaorion" + File.separator + "euler" + File.separator + "P18_67" + File.separator + "67.txt";
+        } else {
+            path = args[0];
+        }
         File file = new File(path);
         Triangle triangle = new Triangle(file);
         long before = System.nanoTime();

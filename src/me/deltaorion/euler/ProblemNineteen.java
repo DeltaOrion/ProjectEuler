@@ -20,7 +20,6 @@ public class ProblemNineteen {
                 31
         };
 
-
         long before = System.nanoTime();
         System.out.println(getSundays());
         long after = System.nanoTime();
